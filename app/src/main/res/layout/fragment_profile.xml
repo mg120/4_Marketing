@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ProfileFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        android:scrollbars="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/logo"
+                android:id="@+id/profile_user_imageV_id"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="37dp"
+                android:text="@string/edit"
+                android:id="@+id/profile_edit_userImage_btn_id"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toEndOf="@id/profile_user_imageV_id"
+                app:layout_constraintBottom_toBottomOf="@+id/profile_user_imageV_id"
+                android:backgroundTint="@color/yellow_btns_color"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="25dp"
+                android:id="@+id/userName_layout_id"
+                android:background="@drawable/edittxt_background"
+                app:layout_constraintTop_toBottomOf="@id/profile_user_imageV_id">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:hint="@string/name"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/userName_ed_id"
+                    android:textColor="@android:color/black" />
+
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="37dp"
+                    android:text="@string/edit"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/profile_edit_userName_btn_id"
+                    android:textColor="@android:color/black"
+                    android:backgroundTint="@color/yellow_btns_color"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:id="@+id/userphone_layout_id"
+                android:background="@drawable/edittxt_background"
+                app:layout_constraintTop_toBottomOf="@id/userName_layout_id">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:hint="@string/phone"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/userPhone_ed_id"
+                    android:textColor="@android:color/black" />
+
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="37dp"
+                    android:text="@string/edit"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/profile_edit_userPhone_btn_id"
+                    android:textColor="@android:color/black"
+                    android:backgroundTint="@color/yellow_btns_color"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:id="@+id/userEmail_layout_id"
+                android:background="@drawable/edittxt_background"
+                app:layout_constraintTop_toBottomOf="@id/userphone_layout_id">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:hint="@string/email"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/userEmail_ed_id"
+                    android:textColor="@android:color/black" />
+
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="37dp"
+                    android:text="@string/edit"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/profile_edit_userEmail_btn_id"
+                    android:textColor="@android:color/black"
+                    android:backgroundTint="@color/yellow_btns_color"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:id="@+id/userAddress_layout_id"
+                android:background="@drawable/edittxt_background"
+                app:layout_constraintTop_toBottomOf="@id/userEmail_layout_id">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:hint="@string/address"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/userAddress_ed_id"
+                    android:textColor="@android:color/black" />
+
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="37dp"
+                    android:text="@string/edit"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/profile_edit_userAddress_btn_id"
+                    android:textColor="@android:color/black"
+                    android:backgroundTint="@color/yellow_btns_color"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:id="@+id/userCity_layout_id"
+                android:background="@drawable/edittxt_background"
+                app:layout_constraintTop_toBottomOf="@id/userAddress_layout_id">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:hint="@string/city"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/userCity_ed_id"
+                    android:textColor="@android:color/black" />
+
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="37dp"
+                    android:text="@string/edit"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/profile_edit_userCity_btn_id"
+                    android:textColor="@android:color/black"
+                    android:backgroundTint="@color/yellow_btns_color"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userCity_layout_id"
+                android:layout_marginTop="10dp"
+                android:id="@+id/view_id"
+                android:background="@color/yellow_btns_color" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:id="@+id/userPassword_layout_id"
+                android:background="@drawable/edittxt_background"
+                app:layout_constraintTop_toBottomOf="@id/view_id">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:hint="@string/passwordd"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/userPassword_txtV_id"
+                    android:textColor="@android:color/black" />
+
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="37dp"
+                    android:text="@string/edit"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/profile_edit_userPassword_btn_id"
+                    android:textColor="@android:color/black"
+                    android:backgroundTint="@color/yellow_btns_color"/>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editProfile_sure_btn_id"
+                android:text="@string/sure"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"
+                android:backgroundTint="@color/yellow_btns_color"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/userPassword_layout_id" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>

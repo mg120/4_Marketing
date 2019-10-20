@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="3dp"
+    android:layout_margin="4dp"
+    android:background="@drawable/card_white_background">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="fitXY"
+        android:id="@+id/home_item_imageV_id" />
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_favorite_black_24dp"
+        app:layout_constraintTop_toTopOf="@id/home_item_imageV_id"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="8dp"
+        android:id="@+id/fav_item_imageV_id" />
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/eye"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_item_imageV_id"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="4dp"
+        android:id="@+id/saw_item_imageV_id"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/saw_val_txtV_id"
+        app:layout_constraintEnd_toStartOf="@id/saw_item_imageV_id"
+        android:text="120"
+        app:layout_constraintTop_toTopOf="@id/saw_item_imageV_id"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="2dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@id/saw_item_imageV_id" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".fragments.AddAdvertiseFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/add_name_ed_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittxt_background"
+            android:padding="10dp"
+            android:hint="@string/add_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/add_part_spinner_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittxt_background"
+            android:padding="10dp"
+            android:layout_marginTop="12dp"
+            android:hint="@string/add_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_name_ed_id" />
+
+        <EditText
+            android:id="@+id/add_price_ed_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittxt_background"
+            android:padding="10dp"
+            android:layout_marginTop="12dp"
+            android:hint="@string/price"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_part_spinner_id" />
+
+        <EditText
+            android:id="@+id/add_country_ed_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittxt_background"
+            android:padding="10dp"
+            android:layout_marginTop="12dp"
+            android:hint="@string/country"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_price_ed_id" />
+
+        <EditText
+            android:id="@+id/add_details_ed_id"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/edittxt_background"
+            android:padding="10dp"
+            android:layout_marginTop="12dp"
+            android:hint="@string/add_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="top"
+            app:layout_constraintTop_toBottomOf="@id/add_country_ed_id" />
+
+        <EditText
+            android:id="@+id/add_phone_ed_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittxt_background"
+            android:padding="10dp"
+            android:layout_marginTop="12dp"
+            android:hint="@string/phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_details_ed_id" />
+
+        <EditText
+            android:id="@+id/add_email_ed_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittxt_background"
+            android:padding="10dp"
+            android:layout_marginTop="12dp"
+            android:hint="@string/email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_phone_ed_id" />
+        
+        
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/add_images_layout_id"
+            app:layout_constraintStart_toStartOf="@id/add_name_ed_id"
+            app:layout_constraintEnd_toEndOf="@id/add_name_ed_id"
+            app:layout_constraintTop_toBottomOf="@id/add_email_ed_id">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/logo"
+                android:layout_weight="1"
+                android:id="@+id/add_imageV_1_id" />
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/logo"
+                android:layout_weight="1"
+                android:id="@+id/add_imageV_2_id" />
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/logo"
+                android:layout_weight="1"
+                android:id="@+id/add_imageV_3_id" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/yellow_background"
+            app:layout_constraintTop_toBottomOf="@id/add_images_layout_id"
+            android:id="@+id/send_add_btn_id"
+            android:text="@string/publish"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/add_name_ed_id"
+            app:layout_constraintEnd_toEndOf="@id/add_name_ed_id" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

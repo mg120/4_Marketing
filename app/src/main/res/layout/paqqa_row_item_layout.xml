@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/card_white_background"
+    android:layout_margin="4dp"
+    android:padding="5dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/baqa_type_layout_id"
+        android:background="@drawable/baqa_type_item_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_marginStart="12dp"
+            android:text="@string/queen_baqa"
+            android:id="@+id/baqa_type_txtV_id"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textSize="16sp"
+        android:id="@+id/baqa_txtV_1_id"
+        android:layout_marginTop="15dp"
+        android:text="تتكون الباقة من خدمة 50 اعلان فى الشهر"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/baqa_type_layout_id"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textSize="16sp"
+        android:id="@+id/baqa_txtV_2_id"
+        android:layout_marginTop="10dp"
+        android:text="تتكون الباقة من خدمة 50 اعلان فى الشهر"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/baqa_txtV_1_id"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/king"
+        android:id="@+id/baqa_image_imageV_id"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/yellow_btns_color"
+        app:layout_constraintTop_toBottomOf="@id/baqa_image_imageV_id"
+        app:layout_constraintStart_toStartOf="@id/baqa_image_imageV_id"
+        app:layout_constraintEnd_toEndOf="@id/baqa_image_imageV_id"
+        android:layout_marginTop="5dp"
+        android:text="@string/suscribe"
+        android:textSize="17sp"
+        android:textColor="@android:color/white"
+        android:id="@+id/baqa_subscribe_btn_id" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
